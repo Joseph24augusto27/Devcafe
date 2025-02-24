@@ -1,15 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-
-
-
 :root {
     font-size: 10px;
     --main-color: #d3ad7f;
     --black: #131313;
     --bg: #010103;
-    --border: 0.1rem solid rgba(255 255 255 0.3);
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
 }
 
 * {
@@ -67,23 +63,38 @@ section {
     position: relative;
 }
 
-
 .header section a img {
     height: 6rem;
 }
-
 
 .header section nav a {
     margin: 0 1rem;
     font-size: 1.8rem;
     color: #fff;
-    transition: 0.3s linear;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.header section nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
 }
 
 .header section nav a:hover {
-    color: #d3ad7f;
-    border-bottom: 0.1rem solid #d3ad7f;
-    padding-bottom: 0.5rem;
+    color: var(--main-color);
+}
+
+.header section nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .caixa-principal {
@@ -111,7 +122,7 @@ section {
 }
 
 .botao-link {
-    background-color: #d3ad7f;
+    background-color: var(--main-color);
     cursor: pointer;
     margin-top: 2rem;
     display: inline-block;
@@ -119,11 +130,11 @@ section {
     color: #fff;
     padding: 1rem 3rem;
     border: none;
-    transition: 0.3s linear;
+    transition: transform 0.3s ease;
 }
 
-.caixa-principal div a:hover {
-    letter-spacing: 0.1rem;
+.botao-link:hover {
+    transform: scale(1.05);
 }
 
 .tiutlo {
@@ -135,40 +146,34 @@ section {
 }
 
 .tiutlo span {
-    color: #d3ad7f;
+    color: var(--main-color);
 }
 
 .caixa-sobre .sobre-conteiner {
     display: flex;
     align-items: center;
-    background-color: #010103;
+    background-color: var(--bg);
     gap: 1.5rem;
     flex-wrap: wrap;
 }
 
-
 .caixa-sobre .sobre-conteiner .sobre-imagem {
-    flex: 1 1 45rem
+    flex: 1 1 45rem;
 }
-
 
 .caixa-sobre .sobre-conteiner .sobre-imagem img {
     width: 100%;
 }
-
 
 .caixa-sobre .sobre-conteiner .sobre-texto {
     flex: 1 1 45rem;
     padding: 2rem;
 }
 
-
 .caixa-sobre .sobre-conteiner .sobre-texto h3 {
     font-size: 3rem;
     color: #fff;
-
 }
-
 
 .caixa-sobre .sobre-conteiner .sobre-texto p {
     font-size: 1.5rem;
@@ -181,23 +186,26 @@ section {
 .modal {
     display: flex;
     flex-direction: column;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
     gap: 20px;
     z-index: 4;
     position: fixed;
     top: 50%;
-    left: -30%;
-    transform: translate(-50%, -50%);
-    transition: left 1s linear;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease-in-out;
 }
 
 .mascara-modal {
     visibility: hidden;
-    transition: 1s linear;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
     z-index: 3;
     position: fixed;
     inset: 0;
     width: 100vw;
     height: 100vh;
-    background: (109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%)
+    background: rgba(10, 12, 16, 0.8);
 }

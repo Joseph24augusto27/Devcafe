@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev club Café</title>
+    <title>Cafena</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,7 +17,6 @@
         <video src="./assets/coffe.mp4" loop muted autoplay></video>
         <div class="mascara"></div>
     </div>
-
 
     <header class="header">
         <section>
@@ -29,60 +27,47 @@
             <nav>
                 <a href="#">home</a>
                 <a href="#">sobre</a>
-                <a onclick="mostrarModal()">endereço</a>
+                <a href="#" id="enderecoLink">endereço</a>
             </nav>
         </section>
     </header>
 
-
-    <section class="caixa-principal ">
+    <section class="caixa-principal">
         <div>
             <h3>code com o melhor café da região</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia in, temporibus perspiciatis
-                laudantium eos quia voluptatem. Eius deleniti, sint similique doloremque ea quia nisi molestiae,
-                iure quasi reprehenderit inventore mollitia?</p>
+            <p>"Desenvolva grandes ideias com um café de primeira! No Cafena, cada gole de café é um upgrade no seu código. Ambiente perfeito para programadores, freelancers e amantes da tecnologia. Conecte-se, codifique e aproveite o melhor café da região! ☕🚀</p>
             <a href="#" class="botao-link">pegue o seu agora</a>
+        </div>
     </section>
 
     <section class="caixa-sobre">
         <h2 class="tiutlo"><span>sobre</span> nós</h2>
         <div class="sobre-conteiner">
             <div class="sobre-imagem">
-                <img src="./assets/about-img.jpeg">
+                <img src="./assets/about-img.jpeg" alt="Imagem sobre café e código">
             </div>
 
             <div class="sobre-texto">
                 <h3>o que faz especial</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem molestiae esse illo ex ut quaerat
-                    accusamus earum necessitatibus accusantium, voluptatum aliquid recusandae nemo, nulla reprehenderit
-                    harum repudiandae, maiores quia corrupti.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque neque voluptates optio, nulla vel
-                    perferendis beatae dolores illo quas sint sapiente facilis veritatis repudiandae natus delectus
-                    architecto rem accusamus libero.</p>
+                <p>☕ Café e Código: A Combinação Perfeita! Aqui no Cafena, acreditamos que grandes ideias começam com um bom café. Nossa missão é criar um ambiente onde desenvolvedores, designers e criativos possam se conectar, compartilhar conhecimento e, claro, degustar um café feito sob medida para quem precisa de energia para programar o futuro. Venha descobrir o que faz do Cafena o lugar ideal para seu próximo deploy... ou simplesmente para relaxar entre um commit e outro! 🚀.</p>
 
                 <a href="#" class="botao-link">saiba mais</a>
             </div>
-
         </div>
-
     </section>
 
+    <!-- Modal -->
     <div class="modal">
         <h3 class="tiutlo"><span>nosso</span> endereço</h3>
-        <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d474404.3594697253!2d-50.18309904647375!3d-21.730510627523962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94be4670cc2bb213%3A0x5e1ed3a32f8146f5!2sCafel%C3%A2ndia%20-%20SP%2C%2016500-000!5e0!3m2!1spt-BR!2sbr!4v1736469999875!5m2!1spt-BR!2sbr"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d474404.3594697253!2d-50.18309904647375!3d-21.730510627523962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94be4670cc2bb213%3A0x5e1ed3a32f8146f5!2sCafel%C3%A2ndia%20-%20SP%2C%2016500-000!5e0!3m2!1spt-BR!2sbr!4v1736469999875!5m2!1spt-BR!2sbr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
+    <!-- Máscara Modal -->
     <div class="mascara-modal" onclick="esconderModal()"></div>
-
-
 
     <script src="./script.js"></script>
 </body>
-
-
-
 
 </html>
